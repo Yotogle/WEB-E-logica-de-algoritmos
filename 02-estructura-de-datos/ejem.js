@@ -1,39 +1,39 @@
-//Crea un arreglo vacio llamado lista de ListaDeCompras
+// Crea un arreglo vacío llamado ListaDeCompras 
+let listaDeCompras = [];  // Cambiado a minúscula para ser consistente con el uso posterior
 
-let ListaDeCompras = [] 
-
-// Implementa una función que agregue un producto a la lista de compras
+// Función para agregar un producto a la lista de compras
 const agregarProducto = producto => {
-    ListaDeCompras.push(producto);
+    listaDeCompras.push(producto);
 }
 
-// Implementa una función que elimine un producto de la lista de compras
+// Función para eliminar un producto de la lista de compras
 const eliminarProducto = productoAEliminar => {
-    let nuevoArray = ListaDeCompras.filter(producto => producto.nombre !== productoAEliminar)
-    ListaDeCompras = nuevoArray;
+    listaDeCompras = listaDeCompras.filter(producto => producto.nombre !== productoAEliminar);
 }
 
+// Función para mostrar la lista
 const mostrarLista = () => {
     listaDeCompras.forEach(item => console.log(item));
-}   
+}
 
-
-agregarProducto ({
+// Agregamos productos
+agregarProducto({
     nombre: "Leche",
     precio: 1.5,
     cantidad: 2
-})
+});
 
-agregarProducto ({
+agregarProducto({
     nombre: "carne",
     precio: 1.5,
     cantidad: 2
-})
-agregarProducto ({
+});
+
+agregarProducto({
     nombre: "huevos",
     precio: 1.5,
     cantidad: 2
-})
+});
 
 eliminarProducto("carne");
 mostrarLista();
