@@ -18,3 +18,9 @@ const nombresOrdenados = ordenarProductos.map(producto => producto.nombre);
 nombresOrdenados.forEach((nombre, index) => {
   console.log(`${index + 1}. ${nombre}`);
 });
+// reduce el precio total de los productos del array 
+const total = productos.reduce((acumulador, producto) => {
+  return acumulador + producto.precio;
+}, 0); 
+
+console.log("Total de precios:", total); 
