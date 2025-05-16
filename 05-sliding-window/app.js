@@ -24,5 +24,5 @@ const text = "JavaScript es un lenguaje de programación increíble para aprende
 console.log(findLongestWord(text)); // Resultado esperado: "programación"
 
 // Ejemplo de uso 2
-const text2 = "Antaño, si lo recuerdo bien, mi vida era un festín donde se abrían todos los corazones, donde todos los vinos corrían.";
+const text2 = "Antaño, si lo recuerdo bien, mi vida era un festín donde se abrían todos los corazones, donde todos los vinos corrían. Una noche, senté a la belleza en entre mis piernas. —Y la encontré amarga. —Y la injurié. ";
 console.log(findLongestWord(text2));
