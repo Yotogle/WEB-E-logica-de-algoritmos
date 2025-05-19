@@ -17,6 +17,12 @@ const agregarNota = (titulo, contenido) => {
     const data = fs.readFileSync(filePath, 'utf8');
     notas = JSON.parse(data);
   }
+//Comprobar que no haya una nota duplicada
+  const duplicada = notas.find(nota => nota.contenido === contenido);
+  if (duplicada) {
+    console.log(`Ya existe una nota con el contenido "${contenido}".`);
+    return;
+  }
   const nuevaNota = { titulo, contenido };
   notas.push(nuevaNota);
 
@@ -71,6 +77,7 @@ function eliminarNota(titulo) {
 agregarNota('Compras', 'Comprar leche y pan.');
 agregarNota('Trabajo', 'Enviar informe al jefe.');
 agregarNota('Estudio', 'Repasar el tema de Node.js.');
+agregarNota('Trabajo', 'Enviar informe al jefe, para 2da revisión');
 listarNotas();
 eliminarNota('Compras');
 listarNotas();
