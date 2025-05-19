@@ -24,5 +24,7 @@ function findMax(arr) {
    
 }
 // Ejemplo de entrada
-const numbers = [3, 8, 2, 10, 5, 7, 12, 25 , 1, 4, 6, 9, 11, 15, 20, 30];
+let numbers = [3, 8, 2, 10, 5, 7, 12, 25 , 1, 4, 6, 9, 11, 15, 20, 30];
 console.log(`El número más grande es: ${findMax(numbers)}`);
+// Salida esperada: El número más grande es: 30
+
